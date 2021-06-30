@@ -1,0 +1,64 @@
+$color_white: white;
+$learn-more: black;
+$shadown-text: black;
+
+@import  'base/mixin';  
+
+
+
+.card-container {
+    height: 80vh;
+    @include flexbox;
+}
+
+.card {
+    @include card;
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 1s;
+        
+    }
+    & .card-layer {
+        text-align: center;
+        position: relative;
+        color: $color_white;
+        letter-spacing: .05rem;
+    }
+    & h3 {
+        font-size: 3rem;
+        margin-top: 5rem;
+        text-shadow: 2px 2px $shadown-text;
+    }
+
+    & p {
+        font-size: 1.5rem;
+        padding: 1.8rem 5rem;
+        text-shadow: 2px 2px $shadown-text;
+        
+    }
+
+    &  a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $learn-more;
+        
+
+        &:hover {
+            text-decoration: underline;
+
+        }
+    }
+    & span {
+        font-size: 1.2rem;
+    
+    }
+
+}
+
